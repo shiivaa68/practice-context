@@ -18,7 +18,7 @@ class Header extends Component {
                <h1>header</h1>
               {
                   userContext.auth?
-                  <span>hi {`${userContext.user.name}`}<span onClick={()=>userContext.logout} style={{color:'red'}}>logout</span></span>:<Link to ='/'>login</Link>
+                  <span>hi {`${userContext.user.name}`}<span onClick={()=>userContext.logout()} style={{color:'red'}}>logout</span></span>:<Link to ='/login'>login</Link>
               }
            </header>
            }

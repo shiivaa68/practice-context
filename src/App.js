@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {Switch,Route} from 'react-router-dom'
 import HeaderC from './component/HeaderC';
+import Header from './component/Header';
+
 import Footer from './component/Footer';
 import Home from './component/Home';
 import NotFound from './component/NotFound';
@@ -57,7 +59,8 @@ if(loading){
       <div>
         {theme === colorTheme.light ? <button onClick={()=>setThem(colorTheme.dark)}> DARK</button> :<button onClick={()=>setThem(colorTheme.light)}>LIGHT</button>} 
       </div>
-     <HeaderC/>
+      <Header/>
+     {/* <HeaderC/> */}
      <section style={{display:'flex'}}>
        <Sidebar/>
        <Switch>
