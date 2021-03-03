@@ -16,6 +16,8 @@ static contextType = ThemeContext
                     <li><NavLink to="/" exact>home</NavLink></li>
                     <li><NavLink to='/post/1'>post</NavLink></li>
                     <li><NavLink to='/profile'>profile</NavLink></li>
+                    <li><NavLink to='/tasks'>Task list</NavLink></li>
+
                 </ul>
             </aside>
         )

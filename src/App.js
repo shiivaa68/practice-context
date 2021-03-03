@@ -10,6 +10,7 @@ import Sidebar from './component/Sidebar';
 import Post from './component/subcomponent/Post'
 import Login from './component/Login';
 import Profile from './component/subcomponent/Profile';
+import Tasks from './component/Hoc/Tasks'
 import PrivateRoute from './component/subcomponent/PrivateRoute'
 import cookie from 'js-cookie'
 import ThemeContext ,{colorTheme} from './component/ThemeContext';
@@ -68,6 +69,10 @@ if(loading){
          {/* <Route path="/post" component={Post}/> */}
          <Route path="/post/:id" component={Post}/>
          <Route path="/login" component={Login}/>
+         {/* <Route path='/tasks' component={Tasks}/> */}
+         <Route to='/tasks'>
+           <Tasks  permission="view_task" />
+         </Route>
          <PrivateRoute  path="/profile" component={Profile}/>
          <Route path="*" component={NotFound}/>
        </Switch>
